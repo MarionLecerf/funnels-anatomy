@@ -27,7 +27,7 @@ export default async (request) => {
     });
 
     const data = await response.json();
-
+console.log('API response status:', response.status, JSON.stringify(data).slice(0, 200));
     return new Response(JSON.stringify(data), {
       status: response.status,
       headers: {
